@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LinkedIn Image Preview</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="app-title">
+        <h1>LinkedIn Image Preview</h1>
+        <p>Клиентский предпросмотр иллюстраций для LinkedIn‑постов (макеты UI).</p>
+      </div>
+      <div class="controls">
+        <div class="upload">
+          <label class="upload-button" for="file-input">Загрузить изображение</label>
+          <input id="file-input" type="file" accept="image/*" />
+          <div class="meta" id="image-meta">Нет файла</div>
+        </div>
+        <div class="post-input">
+          <label for="post-text">Текст поста</label>
+          <textarea id="post-text" rows="3" placeholder="Введите текст поста…"></textarea>
+          <div class="meta" id="text-meta">0 символов</div>
+        </div>
+      </div>
+    </header>
+
+    <main class="surface-grid" id="surface-grid">
+      <div class="surface-pair">
+        <section class="surface" data-surface-id="feed-desktop">
+          <div class="surface-label">Лента (Desktop) · Светлая</div>
+          <div class="li-shell li-desktop">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line long"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-media" data-media></div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="surface theme-dark" data-surface-id="feed-desktop">
+          <div class="surface-label">Лента (Desktop) · Тёмная</div>
+          <div class="li-shell li-desktop">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line long"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-media" data-media></div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="surface-pair">
+        <section class="surface" data-surface-id="feed-mobile">
+          <div class="surface-label">Лента (Mobile) · Светлая</div>
+          <div class="li-shell li-mobile">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-media" data-media></div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="surface theme-dark" data-surface-id="feed-mobile">
+          <div class="surface-label">Лента (Mobile) · Тёмная</div>
+          <div class="li-shell li-mobile">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-media" data-media></div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="surface-pair">
+        <section class="surface" data-surface-id="profile">
+          <div class="surface-label">Профиль (Posts/Activity) · Светлая</div>
+          <div class="li-shell li-desktop">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-media" data-media></div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="surface theme-dark" data-surface-id="profile">
+          <div class="surface-label">Профиль (Posts/Activity) · Тёмная</div>
+          <div class="li-shell li-desktop">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-media" data-media></div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="surface-pair">
+        <section class="surface" data-surface-id="repost">
+          <div class="surface-label">Репост · Светлая</div>
+          <div class="li-shell li-desktop">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-quote">
+              <div class="li-quote-header">
+                <div class="li-avatar small"></div>
+                <div class="li-text">
+                  <div class="li-line short"></div>
+                  <div class="li-line"></div>
+                </div>
+              </div>
+              <div class="li-media" data-media></div>
+            </div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="surface theme-dark" data-surface-id="repost">
+          <div class="surface-label">Репост · Тёмная</div>
+          <div class="li-shell li-desktop">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-quote">
+              <div class="li-quote-header">
+                <div class="li-avatar small"></div>
+                <div class="li-text">
+                  <div class="li-line short"></div>
+                  <div class="li-line"></div>
+                </div>
+              </div>
+              <div class="li-media" data-media></div>
+            </div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div class="surface-pair">
+        <section class="surface" data-surface-id="permalink">
+          <div class="surface-label">Пост по прямой ссылке · Светлая</div>
+          <div class="li-shell li-wide">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-media" data-media></div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="surface theme-dark" data-surface-id="permalink">
+          <div class="surface-label">Пост по прямой ссылке · Тёмная</div>
+          <div class="li-shell li-wide">
+            <div class="li-header">
+              <div class="li-avatar"></div>
+              <div class="li-text">
+                <div class="li-line short"></div>
+                <div class="li-line"></div>
+              </div>
+            </div>
+            <div class="li-caption">
+              <div class="li-post-text" data-post-text></div>
+            </div>
+            <div class="li-media" data-media></div>
+            <div class="li-footer">
+              <div class="li-line short"></div>
+              <div class="li-line"></div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <section class="notes">
+      <h2>Примечания</h2>
+      <ul>
+        <li>Это CSS‑макеты интерфейса без связи с LinkedIn. Размеры можно править в <code>app.js</code> и <code>styles.css</code>.</li>
+        <li>Рендер изображений имитирует «auto» поведение: при слишком узких/широких пропорциях используется кадрирование.</li>
+        <li>Отсечение текста считается по текущим правилам макета и может отличаться от живого LinkedIn на 1–2 слова.</li>
+      </ul>
+    </section>
+
+    <script src="app.js"></script>
+  </body>
+</html>
