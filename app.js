@@ -117,18 +117,8 @@ function applyImageToSurface(surface, objectUrl, ratio) {
   img.src = objectUrl;
 
   const desiredHeight = config.width / ratio;
-  let finalHeight = desiredHeight;
-  let fitMode = "contain";
-
-  if (desiredHeight < config.minHeight) {
-    finalHeight = config.minHeight;
-    fitMode = "cover";
-  }
-
-  if (desiredHeight > config.maxHeight) {
-    finalHeight = config.maxHeight;
-    fitMode = "cover";
-  }
+ const finalHeight = desiredHeight;
+const fitMode = "contain";
 
   media.style.height = `${Math.round(finalHeight)}px`;
   img.style.objectFit = fitMode;
